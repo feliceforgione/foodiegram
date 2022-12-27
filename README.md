@@ -20,31 +20,27 @@
 
 ## About The Project
 
-<img src="src/images/screenshot1.png" alt="screenshot" >
+<img src="src/images/screenshot.jpg" alt="screenshot" >
 
-Share what you are eating with others and find new delcious foods to try. Find interesting foods in your area.
+### Share what you are eating with others and find new delcious foods to try.
 
-<br>
-
-### Built With
-
-- [React 18](https://reactjs.org/)
-- [React Router 6](https://reactrouter.com/)
-- [Firebase 8](https://firebase.google.com/)
-- [Material UI](https://mui.com/)
-- [Apollo](https://www.apollographql.com/)
-- [GraphQL](https://graphql.org/)
-- [Hasura](https://hasura.io/)
-- [PostgreSQL](https://www.postgresql.org/)
-- [Cloudinary](https://cloudinary.com/)
-- [PostGIS](https://postgis.net/)
-- [Google Maps](https://developers.google.com/maps)
+### Find interesting foods in your area.
 
 <br>
+
+## Built With
+
+|                                                   |                                            |                                                 |
+| ------------------------------------------------- | :----------------------------------------: | ----------------------------------------------: |
+| [React 18](https://reactjs.org/)                  | [React Router 6](https://reactrouter.com/) |       [PostgreSQL](https://www.postgresql.org/) |
+| [Firebase 8](https://firebase.google.com/)        |      [Material UI](https://mui.com/)       |           [Cloudinary](https://cloudinary.com/) |
+| [Apollo](https://www.apollographql.com/)          |      [GraphQL](https://graphql.org/)       |                    [Hasura](https://hasura.io/) |
+| [Google Maps](https://developers.google.com/maps) |      [PostGIS](https://postgis.net/)       | [React Hook Form](https://react-hook-form.com/) |
 
 <!-- ROADMAP -->
+<br />
 
-## Features
+# Features
 
 - Explore new food posts that are within your current location
 - Follow people who share foods that you enjoy
@@ -54,6 +50,9 @@ Share what you are eating with others and find new delcious foods to try. Find i
 - Find food posts from specific food establishments
 - Suggestions for people to follow based on your likes
 - Infitinte Scroll food feed
+
+<!-- ROADMAP -->
+<br />
 
 ## Roadmap
 
