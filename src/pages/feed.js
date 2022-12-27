@@ -20,6 +20,7 @@ const FeedPost = React.lazy(() => import("./../components/feed/FeedPost"));
 
 function FeedPage() {
   const { me, feedIds } = React.useContext(UserContext);
+  console.log(me, feedIds);
   const variables = {
     limit: 1,
     feedIds,

@@ -23,11 +23,12 @@ export const UserContext = React.createContext();
 
 function App() {
   const { authState } = React.useContext(AuthContext);
-  // console.log("Authstate", authState);
+  console.log("Authstate", authState);
 
   const isAuth = authState.status === "in";
   const userId = isAuth ? authState.user.uid : null;
   const variables = { userId };
+  console.log("variables", variables);
 
   const { data, loading } = useSubscription(ME, { variables });
 
@@ -44,8 +45,9 @@ function App() {
       </Router>
     );
   }
-
+  console.log("data", data);
   const me = isAuth && !loading && (data ? data.users[0] : null);
+  console.log("me", me);
   const currentUserId = me?.id;
   const followingIds = me?.following.map(({ user }) => user.id);
   const followerIds = me?.followers.map(({ user }) => user.id);

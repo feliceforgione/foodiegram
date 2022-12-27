@@ -125,9 +125,7 @@ function Post({ postId }) {
           <Typography color="textSecondary" sx={classes.datePosted}>
             {formatPostDate(created_at)}
           </Typography>
-          <Box
-            sx={{ ...classes.comment, display: { xs: "none", md: "block" } }}
-          >
+          <Box sx={{ ...classes.comment }}>
             <Divider /> <Comment postId={postId} />
           </Box>
         </Box>
