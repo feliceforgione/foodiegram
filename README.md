@@ -46,13 +46,14 @@ Share what you are eating with others and find new delcious foods to try. Find i
 
 ## Features
 
-- Explore new posts to food posts that are within your local area based on your location
+- Explore new food posts that are within your current location
 - Follow people who share foods that you enjoy
 - Save your favorite posts
 - Leave comments on posts
-- Infitinte Scroll food feed
 - Notifications of when people follow you or like your posts
 - Find food posts from specific food establishments
+- Suggestions for people to follow based on your likes
+- Infitinte Scroll food feed
 
 ## Roadmap
 

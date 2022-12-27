@@ -995,8 +995,8 @@ export const usePostStyles = {
       margin: "0 auto !important",
       textAlign: "center",
       "& img": {
-        maxHeight: "200px !important",
-        maxWidth: "200px !important",
+        //maxHeight: "200px !important",
+        //maxWidth: "200px !important",
         objectFit: "contain !important",
       },
     },

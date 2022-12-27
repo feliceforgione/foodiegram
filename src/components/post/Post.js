@@ -80,7 +80,6 @@ function Post({ postId }) {
         </Box>
         <Box
           style={{
-            width: "calc(100% - 335px)",
             padding: "5px 0 5px 10px",
             borderTop: "1px solid #ccc",
             display: "flex",
