@@ -738,6 +738,11 @@ export const useOptionsDialogStyles = {
     padding: "12px 8px !important",
     fontWeight: "bold !important",
   },
+  shareButton: {
+    fontSize: "16px",
+    padding: "12px 8px !important",
+    "& svg": { verticalAlign: "middle" },
+  },
 };
 
 /* ExploreSuggestions component: /components/explore/ExploreSuggestions.js */

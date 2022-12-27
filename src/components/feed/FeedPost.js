@@ -178,7 +178,7 @@ function FeedPost({ post, index }) {
       {/* {showFollowSuggestions && <FollowSuggestions />} */}
       {showOptionsDialog && (
         <OptionsDialog
-          suthorId={user.id}
+          authorId={user.id}
           postId={id}
           onClose={() => setOptionsDialog(false)}
         />

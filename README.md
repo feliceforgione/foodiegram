@@ -56,7 +56,7 @@ Share what you are eating with others and find new delcious foods to try. Find i
 
 ## Roadmap
 
-- [ ] Implement post sharing feature
+- [x] Implement post sharing feature
 - [ ] Multi-language Support
 - [ ] Login using Facebook or Twitter account
 

@@ -5,6 +5,8 @@ import { useOptionsDialogStyles as classes } from "../../styles";
 import { UserContext } from "./../../App";
 import { useMutation } from "@apollo/client";
 import { UNFOLLOW_USER, DELETE_POST } from "../../graphql/mutations";
+import CopyUrl from "../shared/CopyUrl";
+import SharePost from "../shared/SharePost";
 
 function OptionsDialog({ onClose, authorId, postId }) {
   const { currentUserId, followingIds } = React.useContext(UserContext);
@@ -16,6 +18,9 @@ function OptionsDialog({ onClose, authorId, postId }) {
   const [unfollowUser] = useMutation(UNFOLLOW_USER);
   const [deletePost] = useMutation(DELETE_POST);
   const navigate = useNavigate();
+
+  const postFullUrl = `${window.location.origin}/p/${postId}`;
+  const [showShareDialog, setShowShareDialog] = React.useState(false);
 
   async function handleDeletePost() {
     const variables = {
@@ -37,27 +42,43 @@ function OptionsDialog({ onClose, authorId, postId }) {
     onClose();
   }
 
+  function handleShareClose() {
+    setShowShareDialog(false);
+    onClose();
+  }
+
   return (
-    <Dialog
-      open
-      PaperProps={{ sx: classes.dialogScrollPaper }}
-      onClose={onClose}
-      TransitionComponent={Zoom}
-    >
-      {!isUnrelatedUser && (
-        <Button sx={classes.redButton} onClick={onClick}>
-          {buttonText}
-        </Button>
+    <>
+      {!showShareDialog && (
+        <Dialog
+          open
+          PaperProps={{ sx: classes.dialogScrollPaper }}
+          onClose={onClose}
+          TransitionComponent={Zoom}
+        >
+          {!isUnrelatedUser && (
+            <Button sx={classes.redButton} onClick={onClick}>
+              {buttonText}
+            </Button>
+          )}
+          <Divider />
+          <Button sx={classes.button}>
+            <Link to={`/p/${postId}`}>Go to post</Link>
+          </Button>
+          <Divider />
+          <Button sx={classes.button} onClick={() => setShowShareDialog(true)}>
+            Share Post
+          </Button>
+          <Divider />
+          <Button sx={classes.button}>
+            <CopyUrl url={postFullUrl} />
+          </Button>
+        </Dialog>
       )}
-      <Divider />
-      <Button sx={classes.button}>
-        <Link to={`/p/${postId}`}>Go to post</Link>
-      </Button>
-      <Divider />
-      <Button sx={classes.button}>Share</Button>
-      <Divider />
-      <Button sx={classes.button}>Copy Link</Button>
-    </Dialog>
+      {showShareDialog && (
+        <SharePost shareUrl={postFullUrl} onClose={handleShareClose} />
+      )}
+    </>
   );
 }
 
