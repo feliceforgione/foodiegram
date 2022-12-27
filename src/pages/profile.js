@@ -189,7 +189,7 @@ function ProfileNameSection({ user, isOwner, handleOptionsMenuClick }) {
             )}
           </Box>
           {isOwner ? (
-            <Link to={"accounts/edit"}>
+            <Link to={"/accounts/edit"}>
               <Button variant="outlined" sx={classes.editButton}>
                 Edit Profile
               </Button>
