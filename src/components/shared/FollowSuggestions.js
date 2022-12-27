@@ -31,7 +31,6 @@ function FollowSuggestions({ hideHeader, slidesToShow = 3 }) {
       createdAt: "2021-12-20T08:57:53.517323+00:00",
     });
 
-  console.log("followsuggestions", data);
   return (
     <Box sx={classes.container}>
       {!hideHeader && (
@@ -72,7 +71,7 @@ function FollowSuggestions({ hideHeader, slidesToShow = 3 }) {
 
 function FollowSuggestionsItem({ user }) {
   const { profile_image, username, name, id } = user;
-  console.log("item", username);
+
   return (
     <Box>
       <Box sx={classes.card}>

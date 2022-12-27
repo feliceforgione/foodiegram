@@ -18,9 +18,11 @@ function SearchWithinRange({ handleFilterPosts }) {
   const [useCurrentLocation, setCurrentLocation] = React.useState(false);
   const [userCurrentCoordinates, setUserCurrentCoordiantes] =
     React.useState(null);
+  const [showErrorMessage, setShowErrorMessage] = React.useState(false);
 
   function handleCurrentLocation(event) {
     setCurrentLocation(event.target.checked);
+    setShowErrorMessage(false);
   }
 
   const handleDistance = (event, newValue) => {
@@ -28,6 +30,8 @@ function SearchWithinRange({ handleFilterPosts }) {
   };
 
   function handleFilterData() {
+    if (userCurrentCoordinates == null) return setShowErrorMessage(true);
+    setShowErrorMessage(false);
     const variables = {
       distance: distance * 1609,
       longitude: userCurrentCoordinates.longitude,
@@ -98,11 +102,20 @@ function SearchWithinRange({ handleFilterPosts }) {
             value={distance}
             valueLabelDisplay="on"
             min={1}
-            max={20}
+            max={30}
             aria-labelledby="milage-slider"
             onChange={handleDistance}
           />
           <Box style={{ display: "flex", justifyContent: "flex-end" }}>
+            {showErrorMessage && (
+              <Typography
+                component="span"
+                variant="h6"
+                style={{ marginRight: "20px", color: "red" }}
+              >
+                Please Complete Form
+              </Typography>
+            )}
             <Button variant="contained" size="large" onClick={handleFilterData}>
               Filter
             </Button>
