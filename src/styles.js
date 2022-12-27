@@ -986,8 +986,7 @@ export const usePostStyles = {
       position: "relative !important",
     },
   },
-  postImage: {
-    display: "flex",
+  postImageBox: {
     width: "calc(100% - 335px)",
     [theme.breakpoints.only("xs")]: {
       width: "initial !important",
@@ -1000,6 +999,12 @@ export const usePostStyles = {
         objectFit: "contain !important",
       },
     },
+  },
+  postEstablishment: {
+    padding: "5px 0 5px 10px",
+    borderTop: "1px solid #ccc",
+    borderBottom: "1px solid #ccc",
+    display: "flex",
   },
   postButtonsWrapper: {
     borderLeft: "1px solid rgba(var(--ce3,239,239,239),1)",

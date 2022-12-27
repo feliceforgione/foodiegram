@@ -36,10 +36,12 @@ import {
 import { GET_FEED } from "../../graphql/queries";
 import { UserContext } from "./../../App";
 import { useMutation } from "@apollo/client";
+import SharePost from "../shared/SharePost";
 
 function FeedPost({ post, index }) {
   const [showCaption, setShowCaption] = useState(false);
   const [showOptionsDialog, setOptionsDialog] = useState(false);
+  const [showShareDialog, setShowShareDialog] = useState(false);
   const {
     id,
     media,
@@ -58,6 +60,12 @@ function FeedPost({ post, index }) {
 
   const likesCount = likes_aggregate.aggregate.count;
   const commentsCount = comments_aggregate.aggregate.count;
+
+  const postFullUrl = `${window.location.origin}/p/${id}`;
+
+  function handleShareClose() {
+    setShowShareDialog(false);
+  }
   return (
     <>
       <Box component="article" sx={classes.article}>
@@ -100,7 +108,7 @@ function FeedPost({ post, index }) {
             <Link to={`/p/${id}`}>
               <CommentIcon />
             </Link>
-            <ShareIcon />
+            <ShareIcon onClick={() => setShowShareDialog(true)} />
             <SaveButton savedPosts={saved_posts} postId={id} />
           </Box>
           <Typography sx={classes.likes} variabt="subtitle2">
@@ -182,6 +190,9 @@ function FeedPost({ post, index }) {
           postId={id}
           onClose={() => setOptionsDialog(false)}
         />
+      )}
+      {showShareDialog && (
+        <SharePost shareUrl={postFullUrl} onClose={handleShareClose} />
       )}
     </>
   );

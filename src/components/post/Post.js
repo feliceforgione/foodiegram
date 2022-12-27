@@ -37,9 +37,11 @@ import {
 import { UserContext } from "./../../App";
 import { formatDateToNowShort, formatPostDate } from "../../utils/formatDate";
 import Image from "react-graceful-image";
+import SharePost from "../shared/SharePost";
 
 function Post({ postId }) {
   const [showOptionsDialog, setOptionsDialog] = useState(false);
+  const [showShareDialog, setShowShareDialog] = useState(false);
   const variables = { postId };
   const { data, loading } = useSubscription(GET_POST, { variables });
 
@@ -61,6 +63,12 @@ function Post({ postId }) {
 
   const likesCount = likes_aggregate.aggregate.count;
 
+  const postFullUrl = `${window.location.origin}/p/${id}`;
+
+  function handleShareClose() {
+    setShowShareDialog(false);
+  }
+
   return (
     <Box sx={classes.postContainer}>
       <Box component="article" sx={classes.article}>
@@ -75,22 +83,18 @@ function Post({ postId }) {
           />
         </Box>
         {/* Post Image */}
-        <Box sx={classes.postImage}>
-          <Image src={media} alt="Post media" width="100%" />
-        </Box>
-        <Box
-          style={{
-            padding: "5px 0 5px 10px",
-            borderTop: "1px solid #ccc",
-            display: "flex",
-          }}
-        >
-          <PlaceIcon style={{ paddingRight: "5px" }} />
-          <Link to={`/e/${establishment?.id}`}>
-            <Typography variant="body2" sx={classes.typography}>
-              {establishment?.name}
-            </Typography>
-          </Link>
+        <Box sx={classes.postImageBox}>
+          <Box sx={classes.postImage}>
+            <Image src={media} alt="Post media" width="100%" />
+          </Box>
+          <Box sx={classes.postEstablishment}>
+            <PlaceIcon style={{ paddingRight: "5px" }} />
+            <Link to={`/e/${establishment?.id}`}>
+              <Typography variant="body2" sx={classes.typography}>
+                {establishment?.name}
+              </Typography>
+            </Link>
+          </Box>
         </Box>
         {/* Post Buttons */}
         <Box sx={classes.postButtonsWrapper}>
@@ -99,7 +103,7 @@ function Post({ postId }) {
             <Link to={`/p/${id}`}>
               <CommentIcon />
             </Link>
-            <ShareIcon />
+            <ShareIcon onClick={() => setShowShareDialog(true)} />
             <SaveButton postId={postId} savedPosts={saved_posts} />
           </Box>
           <Typography sx={classes.likes} variabt="subtitle2">
@@ -137,6 +141,9 @@ function Post({ postId }) {
           authorId={user.id}
           onClose={() => setOptionsDialog(false)}
         />
+      )}
+      {showShareDialog && (
+        <SharePost shareUrl={postFullUrl} onClose={handleShareClose} />
       )}
     </Box>
   );
