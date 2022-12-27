@@ -22,14 +22,15 @@
 
 <img src="src/images/screenshot1.png" alt="screenshot" >
 
-Share what you are eating with others and find new delcious foods to try.
+Share what you are eating with others and find new delcious foods to try. Find interesting foods in your area.
 
 <br>
 
 ### Built With
 
 - [React 18](https://reactjs.org/)
-- [Firebase](https://firebase.google.com/)
+- [React Router 6](https://reactrouter.com/)
+- [Firebase 8](https://firebase.google.com/)
 - [Material UI](https://mui.com/)
 - [Apollo](https://www.apollographql.com/)
 - [GraphQL](https://graphql.org/)
@@ -43,10 +44,21 @@ Share what you are eating with others and find new delcious foods to try.
 
 <!-- ROADMAP -->
 
+## Features
+
+- Explore new posts to food posts that are within your local area based on your location
+- Follow people who share foods that you enjoy
+- Save your favorite posts
+- Leave comments on posts
+- Infitinte Scroll food feed
+- Notifications of when people follow you or like your posts
+- Find food posts from specific food establishments
+
 ## Roadmap
 
 - [ ] Implement post sharing feature
 - [ ] Multi-language Support
+- [ ] Login using Facebook or Twitter account
 
 <br>
 
