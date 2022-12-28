@@ -57,8 +57,8 @@ export const useNavbarStyles = {
   section: {
     alignItems: "center",
     display: "flex",
-    height: 54,
-    maxWidth: 975,
+    height: "54px",
+    maxWidth: "975px",
     width: "100%",
     justifyContent: "center",
     padding: "0px 20px",
@@ -66,7 +66,7 @@ export const useNavbarStyles = {
   logoContainer: {
     display: "flex",
     flex: "1 9999 0%",
-    minWidth: 40,
+    minWidth: "40px",
   },
   logoWrapper: {
     flex: "0 0 auto",

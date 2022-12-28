@@ -212,7 +212,7 @@ function Links({ path }) {
             handleClose={() => setAddPostDialog(false)}
           />
         )}
-        <Box sx={{ display: { xs: "none", md: "block" } }}>
+        <Box>
           <UploadWidget onUpload={handleOnUpload}>
             {({ open }) => {
               function handleOnClick(e) {
@@ -224,7 +224,9 @@ function Links({ path }) {
           </UploadWidget>
         </Box>
         {/* Home button */}
-        <Link to="/">{path === "/" ? <HomeActiveIcon /> : <HomeIcon />}</Link>
+        <Box sx={{ display: { xs: "none", md: "block" } }}>
+          <Link to="/">{path === "/" ? <HomeActiveIcon /> : <HomeIcon />}</Link>
+        </Box>
         {/* Explore Button  */}
         <Link to="/explore">
           {path === "/explore" ? <ExploreActiveIcon /> : <ExploreIcon />}
