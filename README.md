@@ -23,7 +23,7 @@
 <img src="src/images/screenshot.jpg" alt="screenshot" >
 <br><br>
 
-### Foodiegram is a social platform that allows users to share and discover local cuisine in their community. With this app, users can connect and share their culinary experiences while exploring new dining options. Foodie Connect is a useful tool for both foodies seeking new experiences and local restaurants looking to promote their dishes.
+### Foodiegram is a social platform that allows users to share and discover local cuisine in their community. With this app, users can connect and share their culinary experiences while exploring new dining options. Foodiegram is a useful tool for both foodies seeking new experiences and local restaurants looking to promote their dishes.
 
 <br>
 
