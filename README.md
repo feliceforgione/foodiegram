@@ -5,7 +5,7 @@
 <div align="center">
 <img src="src/images/logo.png" alt="Logo" >
 
-  <h3 align="center">Food Sharing Application</h3>
+  <h3 align="center">Food Sharing Social Network Application</h3>
 
   <p align="center"> 
     <a href="https://foodiegram.vercel.app/">View Demo</a>
@@ -21,10 +21,9 @@
 ## About The Project
 
 <img src="src/images/screenshot.jpg" alt="screenshot" >
+<br><br>
 
-### Share what you are eating with others and find new delcious foods to try.
-
-### Find interesting foods in your area.
+### Foodiegram is a social platform that allows users to share and discover local cuisine in their community. With this app, users can connect and share their culinary experiences while exploring new dining options. Foodie Connect is a useful tool for both foodies seeking new experiences and local restaurants looking to promote their dishes.
 
 <br>
 
