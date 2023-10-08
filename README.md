@@ -29,12 +29,13 @@
 
 ## Built With
 
-|                                                   |                                            |                                                 |
-| ------------------------------------------------- | :----------------------------------------: | ----------------------------------------------: |
-| [React 18](https://reactjs.org/)                  | [React Router 6](https://reactrouter.com/) |       [PostgreSQL](https://www.postgresql.org/) |
-| [Firebase 8](https://firebase.google.com/)        |      [Material UI](https://mui.com/)       |           [Cloudinary](https://cloudinary.com/) |
-| [Apollo](https://www.apollographql.com/)          |      [GraphQL](https://graphql.org/)       |                    [Hasura](https://hasura.io/) |
-| [Google Maps](https://developers.google.com/maps) |      [PostGIS](https://postgis.net/)       | [React Hook Form](https://react-hook-form.com/) |
+|                                                          |                                            |                                                 |
+| -------------------------------------------------------- | :----------------------------------------: | ----------------------------------------------: |
+| [React 18](https://reactjs.org/)                         | [React Router 6](https://reactrouter.com/) |       [PostgreSQL](https://www.postgresql.org/) |
+| [Firebase 8](https://firebase.google.com/)               |      [Material UI](https://mui.com/)       |           [Cloudinary](https://cloudinary.com/) |
+| [Apollo](https://www.apollographql.com/)                 |      [GraphQL](https://graphql.org/)       |                    [Hasura](https://hasura.io/) |
+| [Google Maps](https://developers.google.com/maps)        |      [PostGIS](https://postgis.net/)       | [React Hook Form](https://react-hook-form.com/) |
+| [Azure Cognitive Services](https://azure.microsoft.com/) |                                            |                                                 |
 
 <!-- ROADMAP -->
 <br />
@@ -48,10 +49,24 @@
 - Notifications of when people follow you or like your posts
 - Find food posts from specific food establishments
 - Suggestions for people to follow based on your likes
+- Determines if uploaded images are food items
 - Infitinte Scroll food feed
 
 <!-- ROADMAP -->
 <br />
+
+## Getting Started
+
+- Create a `.env` file using `.env-sample` and using your own keys
+
+- Install packages `npm install`
+
+- Utilizing a Hasura GraphQL API `https://hasura.io/`
+
+- Run the development server: `npm run start`
+- Open http://localhost:3000 with your browser to see the result.
+
+<br>
 
 ## Roadmap
 
